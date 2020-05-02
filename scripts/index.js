@@ -53,7 +53,7 @@ removeScript = () => {
     window.removeEventListener("focus", focus);
 };
 
-document.getElementsByTagName("button")[0].addEventListener("click", ()=> {
+executeScripts = () => {
     chrome.tabs.executeScript({code:'(' + isInACall + ')();'}, (inACall) =>{
         if(inACall[0]) {
             chrome.storage.sync.get("toggleState", (boolean) => {
@@ -72,4 +72,6 @@ document.getElementsByTagName("button")[0].addEventListener("click", ()=> {
         }
 
     });
-});
+};
+
+document.getElementsByTagName("button")[0].addEventListener("click", ()=> {executeScripts()});
