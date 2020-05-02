@@ -14,7 +14,9 @@
   ],
   "persistent": false
   },
-  "icons": {},
+  "icons": {
+    "32": "img/logo.png"
+  },
   "page_action": {
     "default_popup": "modules/index.html"
   }
