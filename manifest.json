@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "nomicMeet",
+  "version": "1.0",
+  "description": "Save yourself from embarrasing moments and make your mic auto disable when a Google Meet window is not in focus",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "declarativeContent"
+  ],
+  "background": {
+  "scripts": [
+    "background/background.js"
+  ],
+  "persistent": false
+  },
+  "icons": {},
+  "page_action": {
+    "default_popup": "modules/index.html"
+  }
+}
